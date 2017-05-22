@@ -1,0 +1,29 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://unpkg.com/react@latest/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+	</head>
+	<body>
+		<div id="output"></div>
+		<div id="root"></div>
+
+<!-- Your custom script here -->
+<script src="js/main.js"></script>
+<script type="text/babel">
+const getMessage = () => square(404);
+document.getElementById('output').innerHTML = getMessage();
+
+class howdyDo extends React.Component {
+	render() {
+		return <div> Howdy {this.props.name}</div>;
+	}
+}
+
+ReactDOM.render(<howdyDo name="Romeski" />, document.getElementById('root'));
+      
+
+</script>
+	</body>
+</html>
